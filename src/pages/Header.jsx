@@ -1,9 +1,11 @@
 import React from "react";
-import "../css/Sliderbar.css";
-export default function Sliderbar() {
+
+import "../css/Header.css";
+export default function Header() {
   return (
     <div className="r-navbar">
       <button className="btn">Log Out</button>
+      
     </div>
   );
 }
