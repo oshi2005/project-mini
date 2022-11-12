@@ -1,16 +1,26 @@
-.r-navbar {
-  height: 70px;
-  background: #aaa;
-  text-align: end;
-  margin-left: 250px;
+.container-header {
+  width: 250px;
+  position: fixed;
+  top: 0; left: 0;
+  background: #343434;
+  height: 100vh;
 }
-.btn-logout {
-  padding: 15px;
+.navbar > ul {
+  list-style-type: none;
+}
+.navbar > ul > a {
+  text-decoration: none;
+}
+.navbar > ul > a > li {
+  margin: 40px 20px;
   color: white;
-  background: #557153;
-  border-radius: 5px;
-  border: none;
-  margin-right: 10px;
-  margin-top: 10px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navbar > ul > a > li > span {
+  color: antiquewhite;
+  margin-right: 20px;
+}
+.navbar > ul > a > li:hover {
+  color: greenyellow;
 }

@@ -52,7 +52,7 @@ export default function User() {
       </table>
       <Modal
         open={showModal}
-        onClose={handleClose}
+        // onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >

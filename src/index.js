@@ -1,11 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-<<<<<<< HEAD
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min"
-=======
->>>>>>> a1257318cbc4f742555a3b3666251a20142a22ba
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
