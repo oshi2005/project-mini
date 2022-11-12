@@ -1,4 +1,19 @@
-.container {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
+.btn {
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  font-size: 20px;
+  width: 50px;
+}
+.btn:hover {
+  opacity: 0.5;
+}
+.Modal {
+  background-color: white;
+  text-align: center;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  left: 570px;
+  top: 150px;
 }

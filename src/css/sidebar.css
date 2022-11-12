@@ -1,0 +1,22 @@
+.container-header {
+  width: 250px;
+  background-color: #0d1934;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.navbar > ul {
+  list-style-type: none;
+}
+.navbar > ul > a {
+  text-decoration: none;
+}
+.navbar > ul > a > li {
+  padding: 20px;
+  color: white;
+}
+.navbar > ul > a > li > span {
+  color: antiquewhite;
+  margin-right: 20px;
+}

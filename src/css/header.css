@@ -1,0 +1,16 @@
+.r-navbar {
+  height: 70px;
+  background: #aaa;
+  text-align: end;
+  margin-left: 250px;
+}
+.btn-logout {
+  padding: 15px;
+  color: white;
+  background: #557153;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
