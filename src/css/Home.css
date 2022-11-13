@@ -16,4 +16,20 @@
   position: absolute;
   left: 570px;
   top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Edit {
+  height: 500px;
+  width: 700px;
+  left: 470px;
+  top: 110px;
+}
+.form-control {
+  width: 350px;
+}
+.btn {
+  width: 100px;
 }
