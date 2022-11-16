@@ -1,6 +1,18 @@
 import React from "react";
-
 export default function EditModal(props) {
+  const getName = (e) => {
+    props.setName(e.target.value);
+  };
+  const getNameUser = (e) => {
+    props.setUserName(e.target.value);
+  };
+  const getPhone = (e) => {
+    props.setPhone(e.target.value);
+  };
+  const getMail = (e) => {
+    props.setEmail(e.target.value);
+  };
+
   return (
     <div className="Modal Edit">
       <div className="mb-3">
@@ -11,8 +23,8 @@ export default function EditModal(props) {
           type="text"
           className="form-control"
           id="formGroupExampleInput"
-          value={props.user.name}
-          onChange={(e) => props.setName(e.target.value)}
+          defaultValue={props.user.name}
+          onChange={getName}
         />
       </div>
       <div className="mb-3">
@@ -24,7 +36,7 @@ export default function EditModal(props) {
           className="form-control"
           id="formGroupExampleInput2"
           defaultValue={props.user.username}
-          onChange={(e) => props.setUserName(e.target.value)}
+          onChange={getNameUser}
         />
       </div>
       <div className="mb-3">
@@ -36,7 +48,7 @@ export default function EditModal(props) {
           className="form-control"
           id="formGroupExampleInput2"
           defaultValue={props.user.phone}
-          onChange={(e) => props.setPhone(e.target.value)}
+          onChange={getPhone}
         />
       </div>
       <div className="mb-3">
@@ -48,7 +60,7 @@ export default function EditModal(props) {
           className="form-control"
           id="formGroupExampleInput2"
           defaultValue={props.user.email}
-          onChange={(e) => props.setEmail(e.target.value)}
+          onChange={getMail}
         />
       </div>
       <div class="d-grid gap-2 d-md-flex justify-content-md-end">

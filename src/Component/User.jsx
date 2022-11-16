@@ -41,20 +41,23 @@ export default function User() {
     setEditModal(true);
     setEditItem(item);
   };
+
   const handleCloseEdit = () => setEditModal(false);
   const updateUser = (id) => {
     const newObject = [...listUser];
     newObject.forEach((item) => {
-      if (item.id == id) {
-        item.name = Name;
-        item.username = UserName;
-        item.phone = Phone;
-        item.email = Email;
+      if (item.id === id) {
+        item.name = Name == "" ? item.name : Name;
+        item.username = UserName == "" ? item.username : UserName;
+        item.phone = Phone == "" ? item.phone : Phone;
+        item.email = Email == "" ? item.email : Email;
       }
     });
+    console.log(newObject);
     setListUser([...newObject]);
     setEditModal(false);
   };
+
   return (
     <div>
       <table class="table">
@@ -100,13 +103,9 @@ export default function User() {
         <EditModal
           user={editItem}
           updateUser={updateUser}
-          name={Name}
           setName={setName}
-          UserName={UserName}
           setUserName={setUserName}
-          Phone={Phone}
           setPhone={setPhone}
-          Email={Email}
           setEmail={setEmail}
         />
       </Modal>
