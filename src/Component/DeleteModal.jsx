@@ -9,6 +9,7 @@ export default function DeleteModal(props) {
           class="btn btn-primary me-md-2"
           type="button"
           style={{ width: "70px" }}
+          onClick={() => props.onClose()}
         >
           Cancel
         </button>

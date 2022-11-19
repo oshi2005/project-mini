@@ -1,17 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 export default function EditModal(props) {
-  const getName = (e) => {
-    props.setName(e.target.value);
-  };
-  const getNameUser = (e) => {
-    props.setUserName(e.target.value);
-  };
-  const getPhone = (e) => {
-    props.setPhone(e.target.value);
-  };
-  const getMail = (e) => {
-    props.setEmail(e.target.value);
-  };
+  const [Name, setName] = useState(props.user.name);
+  const [UserName, setUserName] = useState(props.user.username);
+  const [Phone, setPhone] = useState(props.user.phone);
+  const [Email, setEmail] = useState(props.user.email);
 
   return (
     <div className="Modal Edit">
@@ -23,8 +15,8 @@ export default function EditModal(props) {
           type="text"
           className="form-control"
           id="formGroupExampleInput"
-          defaultValue={props.user.name}
-          onChange={getName}
+          defaultValue={Name}
+          onChange={(e) => setName(e.target.value)}
         />
       </div>
       <div className="mb-3">
@@ -35,8 +27,8 @@ export default function EditModal(props) {
           type="text"
           className="form-control"
           id="formGroupExampleInput2"
-          defaultValue={props.user.username}
-          onChange={getNameUser}
+          defaultValue={UserName}
+          onChange={(e) => setUserName(e.target.value)}
         />
       </div>
       <div className="mb-3">
@@ -47,8 +39,8 @@ export default function EditModal(props) {
           type="text"
           className="form-control"
           id="formGroupExampleInput2"
-          defaultValue={props.user.phone}
-          onChange={getPhone}
+          defaultValue={Phone}
+          onChange={(e) => setPhone(e.target.value)}
         />
       </div>
       <div className="mb-3">
@@ -59,18 +51,24 @@ export default function EditModal(props) {
           type="text"
           className="form-control"
           id="formGroupExampleInput2"
-          defaultValue={props.user.email}
-          onChange={getMail}
+          defaultValue={Email}
+          onChange={(e) => setEmail(e.target.value)}
         />
       </div>
       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-primary me-md-2" type="button">
+        <button
+          onClick={() => props.onClose()}
+          class="btn btn-primary me-md-2"
+          type="button"
+        >
           Cancel
         </button>
         <button
           class="btn btn-danger"
           type="button"
-          onClick={() => props.updateUser(props.user.id)}
+          onClick={() =>
+            props.updateUser(props.user.id, Name, UserName, Phone, Email)
+          }
         >
           Save
         </button>
